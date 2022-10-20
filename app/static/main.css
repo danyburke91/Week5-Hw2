@@ -1,0 +1,91 @@
+body {
+    background-color: lightblue(186, 242, 176);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.card img {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    height: 17em;
+    width: 25em;  
+}
+
+.card {
+    border: 25px solid transparent;
+    padding: 20px;
+    border-image: url(https://f0.pngfuel.com/png/173/464/pokemon-ball-clip-art-png-clip-art.png) 35% round;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline ;
+    margin-top: 100px;
+}
+
+nav.navbar {
+    background-color: yellow !important;
+    padding-top: 0;
+    padding-bottom:0;
+}
+
+.navbar-brand {
+    padding-right: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px red;
+}
+
+.nav-item {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.nav-item a {
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    
+}
+
+.nav-item a:hover {
+    background-color: lightblue;
+}
+  
+
+h1, h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 3em;
+}
+
+h2{
+    color: blue;
+    }
+
+h3{
+    padding: 30px;
+    color: darkblue;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+.form-control {
+    text-align: center;
+}
+
+.btn {
+    margin-top: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+}
+
