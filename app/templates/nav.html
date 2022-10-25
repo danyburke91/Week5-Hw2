@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-5">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Pokedex Search</a>
+                    <a class="nav-link active" aria-current="page" href="/">Pokedex Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">PokeTeam</a>
@@ -16,6 +16,24 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">BattleZone</a>
                 </li>
+                
+                {% if current_user.is_authenticated %}
+          <li class="nav-item">
+            <p class="nav-link" > Hello, {{current_user.username}} </p>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/login">LogIn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Sign-up</a>
+          </li>
+          {% endif %}
+
+
             </ul>
         </div>
     </div>

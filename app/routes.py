@@ -1,9 +1,7 @@
 from app import app
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for 
 import requests as r
-
 from app.forms import CatchPokemon
-
 
 pokemonInfo = {}
 
@@ -48,5 +46,3 @@ def SearchPokemon():
 @app.route('/PokemonField')
 def pokemonCard():
     return render_template('poke_field.html', pokemonInfo=pokemonInfo)
-            
-            
