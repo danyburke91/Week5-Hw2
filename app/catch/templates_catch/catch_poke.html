@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Catch Pokemons</h1>
+<form method="POST" class="nav_login">
+
+        {{ form.hidden_tag() }}
+        {{ form.pokemon(class='form-control', placeholder='Name') }}
+      
+        <div class="buttons">
+            {{ form.submit(class='btn btn-primary') }}
+        </div>
+    </form>
+</div>
+{% endblock %}
+

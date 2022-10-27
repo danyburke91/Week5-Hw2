@@ -33,7 +33,7 @@
                     <p class="card-text">Base HP: {{pokemonInfo.hp_stat}}</p>
                     <p class="card-text">Base Defense: {{pokemonInfo.defense_stat}}</p>
                     <p class="card-text"><small class="text-muted">Pokemon ID: {{pokemonInfo.id}}</small></p>
-                    <a href="#" class="btn btn-warning"><strong>CATCH</strong></a>
+                    <a href="{{url_for('catch.catchPoke', pokemon_id=pokemonInfo.id)}}" class="btn btn-warning"><strong>CATCH</strong></a>
 
                 </div>
             </div>

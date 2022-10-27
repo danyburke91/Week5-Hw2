@@ -7,6 +7,7 @@ from flask_login import LoginManager
 # import blueprint
 from .auth.routes import auth
 from .profiles.routes import profile
+from .catch.routes import catch
 
 
 app = Flask(__name__)
@@ -21,6 +22,7 @@ app.config.from_object(Config)
 # registering your blueprint
 app.register_blueprint(auth)
 app.register_blueprint(profile)
+app.register_blueprint(catch)
 
 # initialize our database to work with our app
 db.init_app(app)

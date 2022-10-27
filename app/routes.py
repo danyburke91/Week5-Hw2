@@ -1,18 +1,20 @@
 from app import app
 from flask import render_template, request, redirect, url_for 
 import requests as r
-from app.forms import CatchPokemon
+from app.forms import CatchPokemonForm
+from app.models import Pokemon
 
 pokemonInfo = {}
 
 @app.route('/', methods=["GET", "POST"])
 def SearchPokemon():
-    form = CatchPokemon()
+    form = CatchPokemonForm()
     if request.method == "POST":
         print('POST')
         if form.validate():
             print('Validate')
             pokemon = form.pokemon.data
+                        
             poke_data = {}
             response = r.get(f'https://pokeapi.co/api/v2/pokemon/{pokemon}')
             if response.ok:
@@ -37,6 +39,15 @@ def SearchPokemon():
                     pokemonInfo['hp_stat'] = hp_stat
                     defense_stat = poke_data['stats'][2]['base_stat']
                     pokemonInfo['defense_stat'] = defense_stat
+
+                    post = Pokemon.query.filter_by(pokemon=name).first()
+                    if post:
+                        return redirect(url_for('pokemonCard')) 
+
+                    post = Pokemon(name, ability, hp_stat, attack_stat, defense_stat, base_exp, front_shiny, id)
+
+                    post.saveToDB()
+
                     return redirect(url_for('pokemonCard'))                
             return f"Please check your spelling, as '{pokemon}' is not found in the Pokedex."
 

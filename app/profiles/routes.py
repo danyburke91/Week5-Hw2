@@ -3,7 +3,7 @@ from flask_login import current_user, login_required
 from app.auth.forms import EditProfileForm
 from werkzeug.security import generate_password_hash
 
-from app.models import User, db
+from app.models import db, User
 
 profile = Blueprint('profile', __name__, template_folder='templates_profile')
 

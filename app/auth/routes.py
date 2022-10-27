@@ -19,7 +19,7 @@ def signMeUp():
             print(username, email, password)
 
             #add user to database
-            user = User(username, email, password)\
+            user = User(username, email, password)
 
             #add instance to SQL
             user.saveToDB()
