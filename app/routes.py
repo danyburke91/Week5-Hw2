@@ -13,6 +13,10 @@ def SearchPokemon():
         if form.validate():
             print('Validate')
             pokemon = form.pokemon.data
+            # EXAMPLE
+            # attempt = Pokemon.query.filter_by(pname=pokemon).first()
+            # if attempt:
+            #     return render_template('index.html', attempt=pok)
             poke_data = {}
             response = r.get(f'https://pokeapi.co/api/v2/pokemon/{pokemon}')
             if response.ok:

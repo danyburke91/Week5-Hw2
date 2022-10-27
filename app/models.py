@@ -41,6 +41,21 @@ class catch_Pokemon(db.Model):
     
     #inside of the () you will make it a foregin key
 
+
+    #init to instantiate (create an instance of) the class
+    def __init__(self, pname, abil, hp, att, defen, xp, img):
+        self.pokemon = pname
+        self.ability = abil
+        self.hp = hp
+        self.attack = att
+        self.defense = defen
+        self.baseXP = xp
+        self.sprite = img
+    # We will use THIS to create a pokemon object- exp:
+    # poke = Pokemon(<namevariable>, <abilvariable>, ETC)
+    # then it must be saved:
+    # poke.saveToDb()
+
     def saveToDB(self):
         db.session.add(self)
         db.session.commit()
