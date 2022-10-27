@@ -25,10 +25,20 @@ class User(db.Model, UserMixin):
     def updateProfile(self):
         db.session.commit()
 
-class catch_Pokemon(db.Model, UserMixin):
+    def catch(self, pokemon):
+        db.session.commit()
+
+#catch
+class catch_Pokemon(db.Model):
     poke_id = db.Column(db.Integer, primary_key=True) 
-    name = db.Column(db.String(50), nullable=False, unique=True)
-    user_id = db.Column()
+    pokemon = db.Column(db.String(50), nullable=False, unique=True)
+    ability = db.Column(db.String(50), nullable=False)
+    hp = db.Column(db.Integer, nullable = False)
+    attack = db.Column(db.Integer, nullable = False)
+    defense = db.Column(db.Integer, nullable = False)
+    baseXP = db.Column(db.Integer, nullable = False)
+    sprite = db.Column(db.String(200), nullable=False)
+    
     #inside of the () you will make it a foregin key
 
     def saveToDB(self):
