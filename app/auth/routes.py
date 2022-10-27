@@ -41,7 +41,7 @@ def logMeIn():
                 if check_password_hash(user.password, password):
                     print('succesfully logged in')
                     login_user(user)
-                    return redirect(url_for('homePage'))
+                    return redirect(url_for('SearchPokemon'))
                 else:
                     print('incorrect password')
 

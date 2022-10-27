@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Welcome PokeFans!</h1>
-    <h2>Use the Advanced Search to explore Pokémon by type, weakness, ability, and more!</h2>
+    <h1 style="font-size:50px">POKEMON GO</h1>
+    <h2 style="font-size:15px">Search to explore Pokémon by type, weakness, ability, and more! (enter in lower case)</h2>
     <form method="POST">
-        {{ form.hidden_tag() }}
 
+        {{ form.hidden_tag() }}
         {{ form.pokemon(class='form-control w-25', placeholder='Search by name or using its Pokédex number.') }}
         {{ form.submit(class='btn btn-primary') }}
     </form>

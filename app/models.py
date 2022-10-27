@@ -12,10 +12,25 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(150), nullable=False, unique=True)
     password = db.Column(db.String(250), nullable=False)
     day_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
+    
     def __init__(self, username, email, password):
         self.username = username
         self.email = email
         self.password = generate_password_hash(password)
+    
+    def saveToDB(self):
+        db.session.add(self)
+        db.session.commit()
+    
+    def updateProfile(self):
+        db.session.commit()
+
+class catch_Pokemon(db.Model, UserMixin):
+    poke_id = db.Column(db.Integer, primary_key=True) 
+    name = db.Column(db.String(50), nullable=False, unique=True)
+    user_id = db.Column()
+    #inside of the () you will make it a foregin key
+
     def saveToDB(self):
         db.session.add(self)
         db.session.commit()

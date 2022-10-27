@@ -1,81 +1,111 @@
 body {
-    background-color: lightblue(186, 242, 176);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url('https://wallpapercave.com/wp/dIqooJo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .card img {
-    margin-top: 3em;
+    margin-top: 7em;
     margin-bottom: 3em;
-    height: 17em;
-    width: 25em;  
+    margin-left: 5rem;
+    height: auto;
+    width: 11em;
 }
 
 .card {
     border: 25px solid transparent;
     padding: 20px;
+    margin-left: 25%;
     border-image: url(https://f0.pngfuel.com/png/173/464/pokemon-ball-clip-art-png-clip-art.png) 35% round;
+    background-image: url('https://e7.pngegg.com/pngimages/902/338/png-clipart-poke-ball-open-wv-computer-wallpaper-desktop-wallpaper.png');
+    background-size: 800px 402px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 258px 210px;
 }
 
 .card-container {
     display: flex;
     justify-content: center;
     align-items: baseline ;
-    margin-top: 100px;
+    margin-top: 100px;         
+}
+
+.card-body{
+    height: 25rem;
+    width: auto;
 }
 
 nav.navbar {
-    background-color: yellow !important;
+    background-color: #ffcb05 !important;
     padding-top: 0;
     padding-bottom:0;
 }
 
-.navbar-brand {
-    padding-right: 20px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px red;
-}
-
 .nav-item {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .nav-item a {
     text-align: center;
     padding: 20px 16px;
     text-decoration: none;
+    font-size: larger;
     
 }
 
 .nav-item a:hover {
     background-color: lightblue;
 }
-  
+
+.nav_login{
+    width: 20rem;
+    margin-left: 38rem;
+}  
 
 h1, h2 {
     text-align: center;
     padding: 20px;
+    color: black;
+    font-style: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 
 h1 {
     margin-top: 3em;
 }
 
-h2{
-    color: blue;
-    }
-
 h3{
     padding: 30px;
-    color: darkblue;
+    color: whitesmoke;
     text-decoration-line: underline;
     text-decoration-style: double;
 }
 
+h4{
+    text-transform: uppercase;
+}
+
+h5{
+    text-transform: uppercase;
+}
+
+p{
+    text-decoration-line: overline underline;
+    text-transform: uppercase;
+    color: blue;
+}
+
 .form-control {
     text-align: center;
+    background-color: #ffcb05;
+    color: aliceblue;
 }
 
 .btn {

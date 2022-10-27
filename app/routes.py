@@ -29,7 +29,7 @@ def SearchPokemon():
                     pokemonInfo['ability2'] = ability2 
                     base_exp = poke_data['base_experience']
                     pokemonInfo['base_exp'] = base_exp 
-                    front_shiny = poke_data['sprites']['front_shiny']
+                    front_shiny = poke_data['sprites']['other']['official-artwork']['front_default']
                     pokemonInfo['front_shiny'] = front_shiny
                     attack_stat = poke_data['stats'][1]['base_stat']
                     pokemonInfo['attack_stat'] = attack_stat

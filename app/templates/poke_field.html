@@ -17,7 +17,7 @@
 
     {% endblock %}
 
-<h3>Gotta Catch 'Em All!</h3>
+<h3 style="text-align: center ;">Gotta Catch 'Em All!</h3>
 <div class="card-continer">
     <div class="card mb-3" style="max-width: 650px;">
         <div class="row">
@@ -27,12 +27,14 @@
             <div class="col-md-6">
                 <div class="card-body">
                     <h4 class="card-title"><strong>{{pokemonInfo.name}}</strong></h4><br/>
-                    <p class="card-text"><strong>Abilities: {{pokemonInfo.ability}}, {{pokemonInfo.ability2}}</strong></p>
+                    <h5 class="card-text"><strong>Abilities: {{pokemonInfo.ability}}, {{pokemonInfo.ability2}}</strong></h5>
                     <p class="card-text">Base Exp: {{pokemonInfo.base_exp}}</p>
                     <p class="card-text">Base Attack: {{pokemonInfo.attack_stat}}</p>
                     <p class="card-text">Base HP: {{pokemonInfo.hp_stat}}</p>
-                    <p class="card-text">Base Defense: {{pokemonInfo.defense_stat}}</p><br/><br/>
+                    <p class="card-text">Base Defense: {{pokemonInfo.defense_stat}}</p>
                     <p class="card-text"><small class="text-muted">Pokemon ID: {{pokemonInfo.id}}</small></p>
+                    <a href="#" class="btn btn-warning"><strong>CATCH</strong></a>
+
                 </div>
             </div>
         </div>
